@@ -43,6 +43,7 @@ public class EmployeeService {
     @CacheEvict(value = "employeeCache", key = "#empId")
     public String deleteEmployee(int empId){
         repository.deleteById(empId);
+        System.out.println("execute deleteEmployee()..");
         return " Record deleted was successfully with "+empId+" id";
     }
 
